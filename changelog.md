@@ -1,3 +1,51 @@
+### 1.3.6
+
+roll back global quote trimming, move it to the checks where it's actually needed
+
+this issue: https://github.com/rossPatton/stylint/issues/232
+
+
+### 1.3.4
+
+remove stray console.log :(
+
+
+### 1.3.3
+
+this issue: https://github.com/rossPatton/stylint/issues/226
+
+this issue: https://github.com/rossPatton/stylint/issues/227
+
+
+### 1.3.2
+
+strip out content inside quotes to reduce false positives
+
+this issue: https://github.com/rossPatton/stylint/issues/212
+
+this issue: https://github.com/rossPatton/stylint/issues/217
+
+
+### 1.3.1
+
+hotfix a border none check issue
+
+
+### 1.3.0
+
+this issue: https://github.com/rossPatton/stylint/issues/205
+
+this issue: https://github.com/rossPatton/stylint/issues/207
+
+https://github.com/rossPatton/stylint/issues/211
+
+this issue: https://github.com/rossPatton/stylint/issues/215
+
+callback support: https://github.com/rossPatton/stylint/pull/222
+
+exclude pattern support: https://github.com/rossPatton/stylint/pull/223
+
+
 ### 1.2.5
 add .npmignore file
 
@@ -6,15 +54,15 @@ update some dependencies
 stylint is now smarter about looking for a .stylintrc file. here is the order of importance if you want to specify a custom stylint config:
 
   1 using stylint programmatically and passing in config option as a parameter
-  
+
   2 using stylint via command line and passing in a path to a .stylintrc via the --config flag
-  
+
   3 if the first two fail, stylint will then check the cwd
-  
+
   4 if that fails, stylint will walk up 2 directories looking for a .stylintrc file
-  
+
   5 if THAT fails, it checks the home directory
-  
+
   6 if still nothing, and no errors happened during all this, it will just use the default config
 
 

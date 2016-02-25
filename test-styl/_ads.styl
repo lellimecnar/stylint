@@ -2,6 +2,70 @@
  * Styling for various ad types
 */
 
+@require 'animate'
+@require 'nib'
+
+.type
+  content: '()'
+  content: ','
+  content: ","
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+// @stylint off
+
+input
+  display block
+  border 1px solid #000
+  position absolute
+
+// @stylint off
+
+div#my-id #another-id
+  color: #999
+
+.test
+  content: ",";
+
+div:not([style="display: block;"]) {
+  display: none;
+}
+
+// border 0
+// border 0
+// border: 0;
+// border : 0;
+// border 0
+
+// border 1px solid red
+// border: 1px solid red
+// border : 1px solid red
+
+// border none
+// border none
+// border: none;
+// border: none;
+// border none
+
+// outline 0
+// outline 0
+// outline: 0;
+// outline : 0;
+// outline 0
+
+// outline 1px solid red
+// outline: 1px solid red
+// outline : 1px solid red
+
+// outline none
+// outline none
+// outline: none;
+// outline: none;
+// outline none
+
+// @stylint off
+
+
+
 // &,
 // &:hover,
 // &:before,
@@ -10,9 +74,48 @@
 // {some_var},
 // 	margin 0
 
+.module-class {
+    &__anything {
+        padding: 20px;
+    }
+}
+
+body
+  border: none;
+  border: none;
+  border: 1px solid red;
+  border: 0;
+  border: 0;
+
+
+div:not([style="display: block;"]) {
+  display: none;
+}
+
 div#my-id #another-id {
    // ...
 }
+
+.hero {
+    padding-top: rem(380);
+    min-height: rem(670);
+    position: absolute;
+}
+
+.my-class {
+    input {
+        height: 80px;
+        width :200px;
+    }
+}
+
+.test
+    border: 1px solid red;
+
+$foo-color ?= #0976b5;
+
+$x += $i;
+$x -= $i;
 
 .svg {
   background: $background;

@@ -12,7 +12,10 @@ var ordering = require( '../data/ordering.json' )
  */
 var sortOrder = function( line ) {
 	// we don't alphabetize the root yet
-	if ( this.state.context === 0 || this.state.hash || ignoreMeRe.test( line ) ) {
+	if ( this.state.context === 0 ||
+		this.state.hash
+		// ignoreMeRe.test( line )
+		) {
 		this.cache.sortOrderCache = []
 		return
 	}
@@ -31,6 +34,8 @@ var sortOrder = function( line ) {
 	var orderingArr = [] // 3
 	var sorted = true // 4
 	var orderName = this.state.conf // 5
+
+	if ( ignoreMeRe.test( arr[0] ) ) return
 
 	if ( Array.isArray( this.state.conf ) ) {
 		orderName = 'custom grouped'
